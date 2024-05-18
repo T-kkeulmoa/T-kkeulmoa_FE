@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import styled from "styled-components";
+import styled from "@emotion/styled";
 import { useNavigate } from "react-router";
 
 import { PAGE_URL, useGeoLocation } from "@/shared";

@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router";
+import { PieChart, Pie, Legend, Tooltip } from "recharts";
 
 import {
   HeaderContainer,
@@ -27,6 +28,11 @@ import {
 import { Footer } from "@/widgets";
 
 import { PAGE_URL, useUserState, AuthService } from "@/shared";
+
+const sexRatioData = [
+  { name: "남", value: 3, fill: "#EB6927" },
+  { name: "여", value: 4, fill: "#2D8CFF" },
+];
 
 const Home = () => {
   const navigate = useNavigate();
@@ -83,7 +89,20 @@ const Home = () => {
           <InfoImg src="/imgs/info.png" alt="point" />
         </RecycleInfoButton>
         <DottedLine2 />
-        <GraphContainer></GraphContainer>
+        <GraphContainer>
+          <PieChart width={230} height={230}>
+            <Pie
+              data={sexRatioData}
+              dataKey="value"
+              nameKey="name"
+              innerRadius={60}
+              outerRadius={110}
+              cx={110}
+              cy={110}
+            />
+            <Tooltip />
+          </PieChart>
+        </GraphContainer>
       </GridContainer>
       <Footer state="HOME" />
     </>
