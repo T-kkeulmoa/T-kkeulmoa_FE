@@ -10,6 +10,7 @@ import {
   Target2,
   Target3,
   Target4,
+  ScanTitle,
 } from "@/entities";
 import { Footer } from "@/widgets";
 
@@ -32,6 +33,7 @@ const EcoScanPage = () => {
 
   return (
     <>
+      <ScanTitle>에코 스캔</ScanTitle>
       <Target1>
         <img src="/imgs/target1.svg" alt="target" />
       </Target1>

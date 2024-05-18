@@ -129,3 +129,10 @@ export const ScanSubTitle = styled.span`
   left: 50%;
   transform: translate(-50%);
 `;
+
+export const ScanTitle = styled(PointTitle)`
+  position: absolute;
+  top: 4%;
+  left: 50%;
+  transform: translate(-50%);
+`;
