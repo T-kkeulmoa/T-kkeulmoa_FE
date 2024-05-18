@@ -13,6 +13,34 @@ export const MiddleTitle = styled.div`
   color: white;
 `;
 
+export const GraphTitle = styled(MiddleTitle)`
+  color: var(--Basic-Black, var(--BasicBlack, #000));
+
+  margin-bottom: 18px;
+`;
+
+export const GraphSubTitle = styled.div`
+  color: var(--gray05, #888);
+  text-align: center;
+
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+
+  margin-bottom: 4px;
+`;
+
+export const GraphElementTitle = styled(GraphSubTitle)`
+  width: 80px;
+  margin-left: 35px;
+`;
+
+export const Graph99Title = styled(GraphSubTitle)`
+  margin-left: 5px;
+  margin-right: 50px;
+`;
+
 export const HeaderTitle = styled(MiddleTitle)`
   font-weight: bold;
   color: black;

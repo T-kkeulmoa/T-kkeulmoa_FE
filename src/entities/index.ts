@@ -41,8 +41,12 @@ export {
   ScanSubTitle,
   ScanTitle,
   BadgeSubTitle,
+  GraphSubTitle,
+  GraphTitle,
+  GraphElementTitle,
+  Graph99Title,
 } from "./Titles";
-export { BasicLine, DottedLine1, DottedLine2 } from "./Lines";
+export { BasicLine, DottedLine1, DottedLine2, GraphBar } from "./Lines";
 export { Input, TransparencyInput } from "./Inputs";
 
 export { Target1, Target2, Target3, Target4 } from "./Target";

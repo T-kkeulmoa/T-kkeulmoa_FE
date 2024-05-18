@@ -2,6 +2,31 @@ declare namespace User {
   //Basic
   export interface User {}
 
+  export interface MemberRecycleRecordResponseDto {
+    memberId: number;
+    recycleCountSum: number;
+    normalRecycleCount: number;
+    plasticRecycleCount: number;
+    canGlassRecycleCount: number;
+    paperRecycleCount: number;
+    otherRecycleCount: number;
+  }
+  //Store
+  export interface userStore {
+    isSignIn: boolean;
+    nickname: string;
+    point: number;
+    rewardLevel: number;
+    rewardLevel: 0;
+    memberRecycleRecordResponseDto: MemberRecycleRecordResponseDto;
+    setSignIn: (res: SignInResDto) => void;
+    setPoint: (
+      point: number,
+      rewardLevel: number,
+      memberRecycleRecordResponseDto: memberRecycleRecordResponseDto
+    ) => void;
+  }
+
   //DTO
   export interface SignInReqDto {
     id: string;
@@ -17,18 +42,8 @@ declare namespace User {
   export interface FindUserResDto {
     point: number;
     rewardLevel: number;
+    memberRecycleRecordResponseDto: MemberRecycleRecordResponseDto;
   }
 
   //Form type
-
-  //Store
-  //Store
-  export interface userStore {
-    isSignIn: boolean;
-    nickname: string;
-    point: number;
-    rewardLevel: number;
-    setSignIn: (res: SignInResDto) => void;
-    setPoint: (point: number, rewardLevel: number) => void;
-  }
 }

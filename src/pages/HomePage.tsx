@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router";
-import { PieChart, Pie, Legend, Tooltip } from "recharts";
+import { PieChart, Pie, Tooltip } from "recharts";
 
 import {
   HeaderContainer,
@@ -23,22 +23,56 @@ import {
   InfoTitle,
   TrashCanTitle,
   TrashCanSubTitle,
+  GraphSubTitle,
+  GraphTitle,
+  RowContainer,
+  GraphElementTitle,
+  GraphBar,
+  Graph99Title,
+  Height,
 } from "@/entities";
 
 import { Footer } from "@/widgets";
 
 import { PAGE_URL, useUserState, AuthService } from "@/shared";
 
-const sexRatioData = [
-  { name: "남", value: 3, fill: "#EB6927" },
-  { name: "여", value: 4, fill: "#2D8CFF" },
-];
-
 const Home = () => {
   const navigate = useNavigate();
   const nickname = useUserState((state) => state.nickname);
   const point = useUserState((state) => state.point);
+  const memberRecycleRecordResponseDto = useUserState(
+    (state) => state.memberRecycleRecordResponseDto
+  );
+
   const { findUser } = AuthService();
+
+  const data = [
+    {
+      name: "일반쓰레기",
+      value: memberRecycleRecordResponseDto.normalRecycleCount,
+      fill: "#FDD849",
+    },
+    {
+      name: "플라스틱",
+      value: memberRecycleRecordResponseDto.plasticRecycleCount,
+      fill: "#9AB2D4",
+    },
+    {
+      name: "캔/유리",
+      value: memberRecycleRecordResponseDto.plasticRecycleCount,
+      fill: "#EB6927",
+    },
+    {
+      name: "종이",
+      value: memberRecycleRecordResponseDto.paperRecycleCount,
+      fill: "#AAD59F",
+    },
+    {
+      name: "기타",
+      value: memberRecycleRecordResponseDto.otherRecycleCount,
+      fill: "#CDBCDC",
+    },
+  ];
 
   useEffect(() => {
     findUser();
@@ -55,7 +89,7 @@ const Home = () => {
         </HeaderContainer>
         <PointContainer>
           <PointTitle>
-            {nickname} 님의
+            {nickname}님의
             <br />
             <PointHiliteTitle>티끌 </PointHiliteTitle>포인트는
             <br />
@@ -90,18 +124,47 @@ const Home = () => {
         </RecycleInfoButton>
         <DottedLine2 />
         <GraphContainer>
+          <GraphSubTitle>2024년 12월 31일</GraphSubTitle>
+          <GraphTitle>{nickname}님의 티끌모아 그래프 📊</GraphTitle>
           <PieChart width={230} height={230}>
             <Pie
-              data={sexRatioData}
+              data={data}
               dataKey="value"
               nameKey="name"
-              innerRadius={60}
+              innerRadius={62}
               outerRadius={110}
+              paddingAngle={2}
               cx={110}
               cy={110}
             />
             <Tooltip />
           </PieChart>
+          <Height height="12px" />
+          <RowContainer>
+            <GraphElementTitle>일반쓰레기</GraphElementTitle>
+            <GraphBar color="#FDD849" number={50} />
+            <Graph99Title>99</Graph99Title>
+          </RowContainer>
+          <RowContainer>
+            <GraphElementTitle>플라스틱</GraphElementTitle>
+            <GraphBar color="#9AB2D4" number={50} />
+            <Graph99Title>99</Graph99Title>
+          </RowContainer>
+          <RowContainer>
+            <GraphElementTitle>캔/유리</GraphElementTitle>
+            <GraphBar color="#EF753E" number={50} />
+            <Graph99Title>99</Graph99Title>
+          </RowContainer>
+          <RowContainer>
+            <GraphElementTitle>종이</GraphElementTitle>
+            <GraphBar color="#AAD59F" number={50} />
+            <Graph99Title>99</Graph99Title>
+          </RowContainer>
+          <RowContainer>
+            <GraphElementTitle>기타</GraphElementTitle>
+            <GraphBar color="#CDBCDC" number={50} />
+            <Graph99Title>99</Graph99Title>
+          </RowContainer>
         </GraphContainer>
       </GridContainer>
       <Footer state="HOME" />

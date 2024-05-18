@@ -21,10 +21,10 @@ export const AuthService = () => {
 
   const findUser = async () => {
     const {
-      data: { point, rewardLevel },
+      data: { point, rewardLevel, memberRecycleRecordResponseDto },
     } = (await API.get(`${URL}/find`)) as AxiosResponse<User.FindUserResDto>;
 
-    setPoint(point, rewardLevel);
+    setPoint(point, rewardLevel, memberRecycleRecordResponseDto);
   };
 
   return { signin, findUser };
