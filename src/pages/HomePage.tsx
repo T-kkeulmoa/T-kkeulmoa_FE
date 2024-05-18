@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useNavigate } from "react-router";
 
 import {
@@ -25,12 +26,17 @@ import {
 
 import { Footer } from "@/widgets";
 
-import { PAGE_URL, useUserState } from "@/shared";
+import { PAGE_URL, useUserState, AuthService } from "@/shared";
 
 const Home = () => {
   const navigate = useNavigate();
   const nickname = useUserState((state) => state.nickname);
   const point = useUserState((state) => state.point);
+  const { findUser } = AuthService();
+
+  useEffect(() => {
+    findUser();
+  }, []);
 
   return (
     <>

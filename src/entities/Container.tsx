@@ -28,6 +28,8 @@ export const ColumnContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  padding: 9px 40px 23px 40px;
 `;
 
 export const WhiteFormContainer = styled(FormContainer)`

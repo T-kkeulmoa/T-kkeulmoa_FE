@@ -9,6 +9,7 @@ import {
   SubTitle,
   BasicLine,
   SignUpButton,
+  Height,
 } from "@/entities";
 
 import { AuthService, PAGE_URL } from "@/shared";
@@ -34,6 +35,7 @@ const SignInPage = () => {
       <img src="/imgs/logo.png" alt="logo" />
       <LargeTitle>T끌 모아</LargeTitle>
       <SubTitle>티끌모아 지구를 구하자</SubTitle>
+      <Height height="120px" />
       <Input
         placeholder="아이디를 입력해주세요 !!"
         {...register("id", { required: "" })}

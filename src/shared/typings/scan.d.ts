@@ -4,7 +4,10 @@ declare namespace Scan {
   //DTO
   export interface UploadResDto {
     imageUrl: string;
-    methods: { target: string; content: string }[];
+    trashTypeResponseDtoList: {
+      trashTypeName: string;
+      trashTypeContent: string;
+    }[];
   }
 
   //Form type

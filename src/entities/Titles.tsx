@@ -25,7 +25,7 @@ export const SubTitle = styled.div`
   font-weight: normal;
   color: var(--Shark-400, var(--gray05, #888));
 
-  margin-bottom: 140px;
+  margin-bottom: 20px;
 `;
 
 export const PointTitle = styled.span`
@@ -135,4 +135,20 @@ export const ScanTitle = styled(PointTitle)`
   top: 4%;
   left: 50%;
   transform: translate(-50%);
+`;
+
+export const BadgeSubTitle = styled.div`
+  width: 88px;
+  text-align: center;
+
+  color: var(--BasicBlack, #000);
+
+  text-align: center;
+  font-family: "Spoqa Han Sans Neo";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+
+  margin-bottom: 30px;
 `;

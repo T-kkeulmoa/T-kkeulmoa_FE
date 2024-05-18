@@ -3,14 +3,15 @@ import { AxiosResponse } from "axios";
 import { API, setAccess, useUserState } from "@/shared";
 
 export const AuthService = () => {
-  const URL = "api/v1/user";
+  const URL = "api/v1/member";
   const setSignIn = useUserState((state) => state.setSignIn);
+  const setPoint = useUserState((state) => state.setPoint);
 
   const signin = async (body: User.SignInReqDto) => {
     const {
       data: { id, nickname, point },
     } = (await API.post(
-      `${URL}/sign-in`,
+      `${URL}/signin`,
       body
     )) as AxiosResponse<User.SignInResDto>;
 
@@ -18,5 +19,13 @@ export const AuthService = () => {
     setSignIn({ id, nickname, point });
   };
 
-  return { signin };
+  const findUser = async () => {
+    const {
+      data: { point, rewardLevel },
+    } = (await API.get(`${URL}/find`)) as AxiosResponse<User.FindUserResDto>;
+
+    setPoint(point, rewardLevel);
+  };
+
+  return { signin, findUser };
 };

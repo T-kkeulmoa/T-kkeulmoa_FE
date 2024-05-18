@@ -10,13 +10,15 @@ export const ScanService = () => {
 
   const upload = async (data: FormData) => {
     const {
-      data: { imageUrl, methods },
+      data: { imageUrl, trashTypeResponseDtoList },
     } = (await FORMAPI.post(
       `${URL}`,
       data
     )) as AxiosResponse<Scan.UploadResDto>;
 
-    navigate(PAGE_URL.EcoScanResult, { state: { imageUrl, methods } });
+    navigate(PAGE_URL.EcoScanResult, {
+      state: { imageUrl, trashTypeResponseDtoList },
+    });
   };
 
   return { upload };

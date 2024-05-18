@@ -14,6 +14,11 @@ declare namespace User {
     point: number;
   }
 
+  export interface FindUserResDto {
+    point: number;
+    rewardLevel: number;
+  }
+
   //Form type
 
   //Store
@@ -22,6 +27,8 @@ declare namespace User {
     isSignIn: boolean;
     nickname: string;
     point: number;
+    rewardLevel: number;
     setSignIn: (res: SignInResDto) => void;
+    setPoint: (point: number, rewardLevel: number) => void;
   }
 }

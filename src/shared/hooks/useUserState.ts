@@ -5,9 +5,14 @@ export const useUserState = create<User.userStore>((set) => ({
   isSignIn: true,
   nickname: "",
   point: 0,
+  rewardLevel: 0,
 
   //Set function
   setSignIn: (res) => {
     set(() => ({ isSignIn: true, nickname: res.nickname, point: res.point }));
+  },
+
+  setPoint: (point, rewardLevel) => {
+    set(() => ({ point: point, rewardLevel: rewardLevel }));
   },
 }));

@@ -40,6 +40,7 @@ export {
   SmallSubTitle,
   ScanSubTitle,
   ScanTitle,
+  BadgeSubTitle,
 } from "./Titles";
 export { BasicLine, DottedLine1, DottedLine2 } from "./Lines";
 export { Input, TransparencyInput } from "./Inputs";
