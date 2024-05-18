@@ -1,7 +1,13 @@
 import styled from "styled-components";
+import { KakaoMap } from "@/entities";
 
 const Home = () => {
-  return <Styled>home</Styled>;
+  return (
+    <>
+      <KakaoMap />
+      <Styled>home</Styled>
+    </>
+  );
 };
 
 const Styled = styled.div`
