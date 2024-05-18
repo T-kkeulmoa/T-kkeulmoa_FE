@@ -11,6 +11,7 @@ declare namespace User {
   export interface SignInResDto {
     id: string;
     nickname: string;
+    point: number;
   }
 
   //Form type
@@ -20,6 +21,7 @@ declare namespace User {
   export interface userStore {
     isSignIn: boolean;
     nickname: string;
-    setName: (nickname: string) => void;
+    point: number;
+    setSignIn: (res: SignInResDto) => void;
   }
 }

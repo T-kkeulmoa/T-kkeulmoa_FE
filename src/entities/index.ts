@@ -22,6 +22,17 @@ export {
   AppliancesRecycleButton,
   TrashCanButton,
 } from "./Buttons";
-export { LargeTitle, MiddleTitle, SubTitle, HeaderTitle } from "./Titles";
+export {
+  LargeTitle,
+  MiddleTitle,
+  SubTitle,
+  HeaderTitle,
+  PointTitle,
+  PointHiliteTitle,
+  AppliancesTitle,
+  InfoTitle,
+  TrashCanTitle,
+  TrashCanSubTitle,
+} from "./Titles";
 export { BasicLine, DottedLine1, DottedLine2 } from "./Lines";
 export { Input, TransparencyInput } from "./Inputs";
