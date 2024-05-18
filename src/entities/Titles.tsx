@@ -27,3 +27,21 @@ export const SubTitle = styled.div`
 
   margin-bottom: 140px;
 `;
+
+export const PointTitle = styled.span`
+  position: absolute;
+
+  color: var(--Shark-950, #222);
+
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+`;
+
+export const PointHiliteTitle = styled(PointTitle)`
+  position: static;
+
+  color: #43e26b;
+`;

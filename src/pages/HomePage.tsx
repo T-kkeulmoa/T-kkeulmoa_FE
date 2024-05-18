@@ -13,6 +13,8 @@ import {
   AppliancesImg,
   TrashCanImg,
   InfoImg,
+  PointTitle,
+  PointHiliteTitle,
 } from "@/entities";
 
 import { Footer } from "@/widgets";
@@ -28,6 +30,7 @@ const Home = () => {
           <img src="/imgs/codicon_bell.svg" alt="bell" />
         </HeaderContainer>
         <PointContainer>
+          <PointTitle></PointTitle>
           <PointImg src="/imgs/point.png" alt="point" />
         </PointContainer>
         <DottedLine1 />
