@@ -8,4 +8,6 @@ export enum PAGE_URL {
   EcoScanResult = "/ecoscanresult",
 
   EcoBadge = "/ecobadge",
+
+  AppliancesRecycle = "/appliancesrecycle",
 }

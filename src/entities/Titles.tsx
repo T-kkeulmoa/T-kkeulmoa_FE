@@ -70,6 +70,13 @@ export const PointTitle = styled.span`
   letter-spacing: 1px;
 `;
 
+export const PlusTitle = styled(PointTitle)`
+  position: relative;
+  left: 6px;
+  color: var(--Shark-950, #222);
+  font-size: 19 px;
+`;
+
 export const PointHiliteTitle = styled(PointTitle)`
   position: static;
 
@@ -160,7 +167,7 @@ export const ScanSubTitle = styled.span`
 
 export const ScanTitle = styled(PointTitle)`
   position: absolute;
-  top: 4%;
+  top: 5%;
   left: 50%;
   transform: translate(-50%);
 `;

@@ -107,7 +107,9 @@ const Home = () => {
           </TrashCanSubTitle>
           <TrashCanImg src="/imgs/trashcan.png" alt="point" />
         </TrashCanButton>
-        <AppliancesRecycleButton>
+        <AppliancesRecycleButton
+          onClick={() => navigate(PAGE_URL.AppliancesRecycle)}
+        >
           <AppliancesTitle>
             가전 분리 <br />
             가이드

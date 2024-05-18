@@ -23,6 +23,7 @@ export {
   TrashCanImg,
   InfoImg,
   ScanResultImg,
+  AppliancesRecycleImg,
 } from "./Img";
 
 export {
@@ -55,6 +56,7 @@ export {
   GraphElementTitle,
   Graph99Title,
   ScanResultSubTitle,
+  PlusTitle,
 } from "./Titles";
 export { BasicLine, DottedLine1, DottedLine2, GraphBar } from "./Lines";
 export { Input, TransparencyInput } from "./Inputs";

@@ -2,11 +2,12 @@ import { useLocation } from "react-router-dom";
 import { useNavigate } from "react-router";
 
 import {
-  PointTitle,
+  PlusTitle,
   ScanResultImg,
   CloseButton,
   ScanResultContainer,
   ScanResultSubTitle,
+  ScanTitle,
 } from "@/entities";
 import { PAGE_URL } from "@/shared";
 
@@ -22,6 +23,7 @@ const EcoScanResultPage = () => {
 
   return (
     <>
+      <ScanTitle>에코 스캔 결과</ScanTitle>
       <CloseButton onClick={() => navigate(PAGE_URL.EcoScan)}>
         <img src="/imgs/close.svg" alt="close" />
       </CloseButton>
@@ -29,9 +31,9 @@ const EcoScanResultPage = () => {
       <ScanResultContainer>
         {trashTypeResponseDtoList.map((trashTypeResponseDto, index) => (
           <>
-            <PointTitle key={index}>
-              {trashTypeResponseDto.trashTypeName}
-            </PointTitle>
+            <PlusTitle key={index}>
+              {trashTypeResponseDto.trashTypeName} 버리는 방법
+            </PlusTitle>
             <ScanResultSubTitle key={index}>
               {trashTypeResponseDto.trashTypeContent}
             </ScanResultSubTitle>

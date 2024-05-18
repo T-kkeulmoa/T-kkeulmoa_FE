@@ -35,3 +35,14 @@ export const ScanResultImg = styled.img`
   flex-shrink: 0;
   border-radius: 15px;
 `;
+
+export const AppliancesRecycleImg = styled.img`
+  position: absolute;
+
+  border-radius: 10px;
+
+  top: 130px;
+  left: 0px;
+
+  width: 100%;
+`;
