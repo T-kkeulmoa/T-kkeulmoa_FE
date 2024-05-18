@@ -22,6 +22,7 @@ export {
   RecycleInfoButton,
   AppliancesRecycleButton,
   TrashCanButton,
+  ScanSubmitButton,
 } from "./Buttons";
 export {
   LargeTitle,
@@ -35,6 +36,7 @@ export {
   TrashCanTitle,
   TrashCanSubTitle,
   SmallSubTitle,
+  ScanSubTitle,
 } from "./Titles";
 export { BasicLine, DottedLine1, DottedLine2 } from "./Lines";
 export { Input, TransparencyInput } from "./Inputs";

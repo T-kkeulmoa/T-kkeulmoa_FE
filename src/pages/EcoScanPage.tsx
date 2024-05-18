@@ -3,9 +3,12 @@ import styled from "styled-components";
 import { useState, useRef, useEffect } from "react";
 import { Camera } from "react-camera-pro";
 
-import { dataURLtoFile } from "@/shared";
+import { dataURLtoFile, ScanService } from "@/shared";
+import { ScanSubmitButton, ScanSubTitle } from "@/entities";
+import { Footer } from "@/widgets";
 
 const EcoScanPage = () => {
+  const { upload } = ScanService();
   const camera = useRef<{
     width: string;
     height: string;
@@ -17,6 +20,7 @@ const EcoScanPage = () => {
     if (image) {
       const formData = new FormData();
       formData.append("image", dataURLtoFile(image, "image"));
+      upload(formData);
     }
   }, [image]);
 
@@ -47,15 +51,20 @@ const EcoScanPage = () => {
             canvas: "Canvas is not supported.",
           }}
         />
-        <button
+        <ScanSubTitle>
+          환경을 위한 올바른 분리수거를 위해,
+          <br />
+          쓰레기의 전체 모습이 잘 보이도록 사진을 촬영해 주세요.
+        </ScanSubTitle>
+        <ScanSubmitButton
           onClick={() => {
             setImage(camera.current!.takePhoto());
           }}
         >
-          Take photo
-        </button>
-        <img src={image ? image : ""} alt="Taken photo" />
+          전송하기
+        </ScanSubmitButton>
       </CameraContainer>
+      <Footer state="ML" />
     </>
   );
 };

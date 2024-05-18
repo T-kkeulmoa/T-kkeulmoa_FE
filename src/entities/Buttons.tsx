@@ -23,6 +23,18 @@ export const SubmitButton = styled.button`
   margin-bottom: 25px;
 `;
 
+export const ScanSubmitButton = styled(SubmitButton)`
+  position: absolute;
+
+  width: 205px;
+  height: 35px;
+  border-radius: 12px;
+
+  bottom: 10%;
+  left: 50%;
+  transform: translate(-50%);
+`;
+
 export const SignUpButton = styled.div`
   font-size: 12px;
   font-weight: normal;

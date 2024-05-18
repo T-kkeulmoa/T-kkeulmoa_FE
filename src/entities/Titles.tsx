@@ -115,3 +115,17 @@ export const SmallSubTitle = styled.div`
   font-weight: 500;
   line-height: normal;
 `;
+
+export const ScanSubTitle = styled.span`
+  color: var(--Shark-400, var(--gray05, #888));
+  text-align: center;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 500;
+  width: 260px;
+
+  position: absolute;
+  bottom: 19%;
+  left: 50%;
+  transform: translate(-50%);
+`;
