@@ -24,13 +24,31 @@ export const HeaderContainer = styled.div`
 
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 
   width: 100%;
 
-  margin-top: 10px;
+  margin-top: 20px;
   margin-bottom: 20px;
+`;
+
+export const FooterContainer = styled.div`
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+
+  display: flex;
+  width: 100%;
+  height: 87px;
+  padding: 9px 35px 23px 35px;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 20px 20px 0px 0px;
+  background: #fff;
+
+  box-shadow: 0px -1px 4px 0px rgba(0, 0, 0, 0.25);
 `;
 
 export const GridContainer = styled.div`
@@ -52,6 +70,8 @@ export const GridContainer = styled.div`
 `;
 
 export const PointContainer = styled.div`
+  position: relative;
+
   grid-area: point;
 
   width: 390px;
@@ -65,6 +85,8 @@ export const PointContainer = styled.div`
 `;
 
 export const GraphContainer = styled.div`
+  position: relative;
+
   grid-area: graph;
 
   display: flex;
@@ -78,6 +100,8 @@ export const GraphContainer = styled.div`
 
   border-radius: 30px;
   background: #fff;
+
+  margin-bottom: 110px;
 
   box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
 `;

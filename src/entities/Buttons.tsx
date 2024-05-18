@@ -32,6 +32,8 @@ export const SignUpButton = styled.div`
 `;
 
 export const TrashCanButton = styled.div`
+  position: relative;
+
   grid-area: trash-can;
 
   width: 175px;
@@ -45,6 +47,8 @@ export const TrashCanButton = styled.div`
 `;
 
 export const AppliancesRecycleButton = styled.div`
+  position: relative;
+
   grid-area: appliances-recycle;
 
   width: 187px;
@@ -58,6 +62,8 @@ export const AppliancesRecycleButton = styled.div`
 `;
 
 export const RecycleInfoButton = styled.div`
+  position: relative;
+
   grid-area: recycle-info;
 
   width: 187px;

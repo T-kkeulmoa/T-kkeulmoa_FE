@@ -16,6 +16,8 @@ export const MiddleTitle = styled.div`
 export const HeaderTitle = styled(MiddleTitle)`
   font-weight: bold;
   color: black;
+
+  margin-right: 200px;
 `;
 
 export const SubTitle = styled.div`
