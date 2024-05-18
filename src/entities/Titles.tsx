@@ -180,3 +180,17 @@ export const BadgeSubTitle = styled.div`
 
   margin-bottom: 30px;
 `;
+
+export const ScanResultSubTitle = styled.div`
+  width: 364px;
+  height: 71px;
+
+  color: var(--BasicBlack, #000);
+
+  font-family: "Spoqa Han Sans Neo";
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.26px;
+`;

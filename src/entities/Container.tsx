@@ -69,6 +69,19 @@ export const FooterContainer = styled.div`
   box-shadow: 0px -1px 4px 0px rgba(0, 0, 0, 0.25);
 `;
 
+export const ScanResultContainer = styled(FooterContainer)`
+  left: 50%;
+  transform: translate(-50%);
+
+  justify-content: none;
+  align-items: none;
+
+  width: 393px;
+  height: 381px;
+
+  overflow: hidden;
+`;
+
 export const RowContainer = styled.div`
   margin-top: 5px;
 

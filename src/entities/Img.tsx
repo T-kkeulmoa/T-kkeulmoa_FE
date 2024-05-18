@@ -27,3 +27,11 @@ export const InfoImg = styled.img`
   bottom: 0px;
   right: 30px;
 `;
+
+export const ScanResultImg = styled.img`
+  object-fit: cover;
+  width: 393px;
+  height: 440px;
+  flex-shrink: 0;
+  border-radius: 15px;
+`;

@@ -9,6 +9,7 @@ export {
   FooterContainer,
   RowContainer,
   CameraContainer,
+  ScanResultContainer,
 } from "./Container";
 export { Loading } from "./Loading";
 export { KakaoMap } from "./KakaoMap";
@@ -16,7 +17,13 @@ export { KakaoMap } from "./KakaoMap";
 export { Background } from "./Background";
 export { Height } from "./Height";
 
-export { PointImg, AppliancesImg, TrashCanImg, InfoImg } from "./Img";
+export {
+  PointImg,
+  AppliancesImg,
+  TrashCanImg,
+  InfoImg,
+  ScanResultImg,
+} from "./Img";
 
 export {
   SignUpButton,
@@ -25,7 +32,9 @@ export {
   AppliancesRecycleButton,
   TrashCanButton,
   ScanSubmitButton,
+  CloseButton,
 } from "./Buttons";
+
 export {
   LargeTitle,
   MiddleTitle,
@@ -45,6 +54,7 @@ export {
   GraphTitle,
   GraphElementTitle,
   Graph99Title,
+  ScanResultSubTitle,
 } from "./Titles";
 export { BasicLine, DottedLine1, DottedLine2, GraphBar } from "./Lines";
 export { Input, TransparencyInput } from "./Inputs";

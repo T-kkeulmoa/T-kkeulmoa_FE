@@ -4,6 +4,8 @@ import { useNavigate } from "react-router";
 
 import { PAGE_URL, useGeoLocation } from "@/shared";
 
+import { CloseButton } from "@/entities";
+
 const geolocationOptions = {
   enableHighAccuracy: true,
   timeout: 1000 * 10,
@@ -83,12 +85,4 @@ const Map = styled.div`
 
   width: 100vw;
   height: 100vh;
-`;
-
-const CloseButton = styled.div`
-  position: fixed;
-  top: 50px;
-  left: 30px;
-
-  z-index: 2;
 `;

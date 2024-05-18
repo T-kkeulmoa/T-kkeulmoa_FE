@@ -88,3 +88,11 @@ export const RecycleInfoButton = styled.div`
   margin-top: 17px;
   box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
 `;
+
+export const CloseButton = styled.div`
+  position: fixed;
+  top: 50px;
+  left: 30px;
+
+  z-index: 2;
+`;
