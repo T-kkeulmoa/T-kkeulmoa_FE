@@ -1,20 +1,5 @@
 import styled from "styled-components";
 
-export const Input = styled.input`
-  width: 267px;
-  height: 47px;
-  flex-shrink: 0;
-
-  border-radius: 100px;
-  border: 1px solid var(--button-Sub, #bdbdbd);
-
-  font-weight: bold;
-
-  &::placeholder {
-    text-align: center;
-  }
-`;
-
 export const SubmitButton = styled.button`
   display: flex;
   width: 300px;
@@ -33,4 +18,15 @@ export const SubmitButton = styled.button`
   border: 0px;
   border-radius: 12px;
   background: #98fb98;
+
+  margin-top: 15px;
+  margin-bottom: 25px;
+`;
+
+export const SignUpButton = styled.div`
+  font-size: 12px;
+  font-weight: normal;
+  color: var(--Shark-400, var(--gray05, #888));
+
+  margin-top: 12px;
 `;

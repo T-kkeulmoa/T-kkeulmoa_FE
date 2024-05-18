@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-export const BackgroundContainer = styled.div`
+export const SignInContainer = styled.form`
   position: absolute;
   top: 0ex;
   left: 0px;
