@@ -6,4 +6,6 @@ export enum PAGE_URL {
   TrashCan = "/trashcan",
   EcoScan = "/ecoscan",
   EcoScanResult = "/ecoscanresult",
+
+  EcoBadge = "/ecobadge",
 }

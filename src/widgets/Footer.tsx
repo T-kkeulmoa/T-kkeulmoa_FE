@@ -39,7 +39,13 @@ export const Footer = ({ state }: { state: "HOME" | "ML" | "GROUP" }) => {
           {state == "GROUP" ? (
             <img src="/imgs/group_on.svg" alt="group_on" />
           ) : (
-            <img src="/imgs/group_off.svg" alt="group_off" />
+            <img
+              src="/imgs/group_off.svg"
+              alt="group_off"
+              onClick={() => {
+                navigate(PAGE_URL.EcoBadge);
+              }}
+            />
           )}
         </SmallSubTitle>
       </RowContainer>

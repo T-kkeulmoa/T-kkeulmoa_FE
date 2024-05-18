@@ -15,6 +15,21 @@ export const FormContainer = styled.form`
   align-items: center;
 `;
 
+export const ColumnContainer = styled.div`
+  position: absolute;
+  top: 0ex;
+  left: 0px;
+
+  display: flex;
+
+  width: 100vw;
+  height: 100vh;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
 export const WhiteFormContainer = styled(FormContainer)`
   background-color: white;
 `;

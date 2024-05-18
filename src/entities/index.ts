@@ -1,4 +1,5 @@
 export {
+  ColumnContainer,
   FormContainer,
   HeaderContainer,
   WhiteFormContainer,
