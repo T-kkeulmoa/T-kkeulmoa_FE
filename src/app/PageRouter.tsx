@@ -1,10 +1,10 @@
-import { Suspense, lazy } from "react";
+import { Suspense } from "react";
 import { BrowserRouter as RootRouter } from "react-router-dom";
-import { Routes, Route } from "react-router-dom";
 
-import { PAGE_URL } from "@/shared";
 import { Loading } from "@/entities";
+
 import AppStyles from "./AppStyles";
+import AuthRouter from "./AuthRouter";
 
 declare global {
   interface Window {
@@ -12,15 +12,11 @@ declare global {
   }
 }
 
-const Home = lazy(() => import("@/pages/HomePage"));
-
 const PageRouter = () => (
   <Suspense fallback={<Loading />}>
     <RootRouter>
       <AppStyles />
-      <Routes>
-        <Route path={PAGE_URL.Home} element={<Home />} />
-      </Routes>
+      <AuthRouter />
     </RootRouter>
   </Suspense>
 );

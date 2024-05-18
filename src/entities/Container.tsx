@@ -1,7 +1,15 @@
 import styled from "@emotion/styled";
 
-export const Container = styled.div`
+export const BackgroundContainer = styled.div`
+  position: absolute;
+  top: 0ex;
+  left: 0px;
+
   display: flex;
+
+  width: 100vw;
+  height: 100vh;
+
   flex-direction: column;
   justify-content: center;
   align-items: center;
