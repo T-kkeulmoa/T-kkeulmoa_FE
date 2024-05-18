@@ -5,6 +5,7 @@ import { PAGE_URL, useUserState } from "@/shared";
 
 const Home = lazy(() => import("@/pages/HomePage"));
 const SignIn = lazy(() => import("@/pages/SignInPage"));
+const SignUp = lazy(() => import("@/pages/SignUpPage"));
 
 const AuthRouter = () => {
   const isSignIn = useUserState((state) => state.isSignIn);
@@ -18,6 +19,8 @@ const AuthRouter = () => {
     <>
       <Routes>
         <Route path={PAGE_URL.SignIn} element={<SignIn />} />
+        <Route path={PAGE_URL.SignUp} element={<SignUp />} />
+
         <Route path={PAGE_URL.Home} element={<Home />} />
       </Routes>
     </>

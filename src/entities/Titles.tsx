@@ -7,6 +7,12 @@ export const LargeTitle = styled.div`
   margin-bottom: 5px;
 `;
 
+export const MiddleTitle = styled.div`
+  font-size: 18px;
+  font-weight: normal;
+  color: white;
+`;
+
 export const SubTitle = styled.div`
   font-size: 14px;
   font-weight: normal;

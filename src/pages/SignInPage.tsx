@@ -1,7 +1,8 @@
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 
 import {
-  SignInContainer,
+  FormContainer,
   Input,
   SubmitButton,
   LargeTitle,
@@ -10,9 +11,10 @@ import {
   SignUpButton,
 } from "@/entities";
 
-import { AuthService } from "@/shared";
+import { AuthService, PAGE_URL } from "@/shared";
 
 const SignInPage = () => {
+  const navigate = useNavigate();
   const { register, handleSubmit } = useForm<User.SignInReqDto>({
     defaultValues: {
       id: "",
@@ -23,12 +25,12 @@ const SignInPage = () => {
   const { signin } = AuthService();
 
   const onSubmit = (data: User.SignInReqDto) => {
-    console.log(data);
-    //signin(data);
+    //console.log(data);
+    signin(data);
   };
 
   return (
-    <SignInContainer onSubmit={handleSubmit(onSubmit)}>
+    <FormContainer onSubmit={handleSubmit(onSubmit)}>
       <img src="/imgs/logo.png" alt="logo" />
       <LargeTitle>T끌 모아</LargeTitle>
       <SubTitle>티끌모아 지구를 구하자</SubTitle>
@@ -41,10 +43,16 @@ const SignInPage = () => {
         type="password"
         {...register("password", { required: "" })}
       />
-      <SubmitButton>시작하기</SubmitButton>
+      <SubmitButton onSubmit={handleSubmit(onSubmit)}>시작하기</SubmitButton>
       <BasicLine />
-      <SignUpButton onSubmit={handleSubmit(onSubmit)}>회원가입</SignUpButton>
-    </SignInContainer>
+      <SignUpButton
+        onClick={() => {
+          navigate(PAGE_URL.SignUp);
+        }}
+      >
+        회원가입
+      </SignUpButton>
+    </FormContainer>
   );
 };
 
