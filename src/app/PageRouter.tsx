@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 
 import { PAGE_URL } from "@/shared";
 import { Loading } from "@/entities";
+import AppStyles from "./AppStyles";
 
 declare global {
   interface Window {
@@ -16,6 +17,7 @@ const Home = lazy(() => import("@/pages/HomePage"));
 const PageRouter = () => (
   <Suspense fallback={<Loading />}>
     <RootRouter>
+      <AppStyles />
       <Routes>
         <Route path={PAGE_URL.Home} element={<Home />} />
       </Routes>

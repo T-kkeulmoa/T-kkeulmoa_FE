@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <>
       <KakaoMap />
-      <Styled>home</Styled>
+      <Styled>된건가</Styled>
     </>
   );
 };
