@@ -4,4 +4,5 @@ export enum PAGE_URL {
   Home = "/home",
 
   TrashCan = "/trashcan",
+  EcoScan = "/ecoscan",
 }

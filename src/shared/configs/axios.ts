@@ -5,13 +5,24 @@ export const API = axios.create({
   baseURL: import.meta.env.VITE_SERVER_URL,
   headers: {
     "Content-Type": "application/json",
-    "ngrok-skip-browser-warning": "69420",
+  },
+});
+
+export const FORMAPI = axios.create({
+  baseURL: import.meta.env.VITE_SERVER_URL,
+  headers: {
+    "Content-Type": "multipart/form-data",
   },
 });
 
 //Auth
-export const setAccess = (token: string): unknown =>
-  (API.defaults.headers["Authorization"] = token);
+export const setAccess = (token: string): void => {
+  API.defaults.headers["Authorization"] = token;
+  FORMAPI.defaults.headers["Authorization"] = token;
+};
+
+/* export const getAccess = (): string =>
+  `${API.defaults.headers["Authorization"]}`; */
 
 /* export const resetAccess = (): unknown =>
   delete API.defaults.headers["Authorization"];
