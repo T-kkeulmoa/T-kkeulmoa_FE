@@ -76,7 +76,7 @@ const Home = () => {
         <DottedLine2 />
         <GraphContainer></GraphContainer>
       </GridContainer>
-      <Footer />
+      <Footer state="HOME" />
     </>
   );
 };

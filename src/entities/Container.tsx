@@ -41,14 +41,24 @@ export const FooterContainer = styled.div`
   display: flex;
   width: 100%;
   height: 87px;
-  padding: 9px 35px 23px 35px;
-  justify-content: center;
+  padding: 9px 40px 23px 40px;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
 
   border-radius: 20px 20px 0px 0px;
   background: #fff;
 
   box-shadow: 0px -1px 4px 0px rgba(0, 0, 0, 0.25);
+`;
+
+export const RowContainer = styled.div`
+  margin-top: 5px;
+
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
 `;
 
 export const GridContainer = styled.div`

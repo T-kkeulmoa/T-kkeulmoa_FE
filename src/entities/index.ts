@@ -6,6 +6,7 @@ export {
   GridContainer,
   PointContainer,
   FooterContainer,
+  RowContainer,
 } from "./Container";
 export { Loading } from "./Loading";
 export { KakaoMap } from "./KakaoMap";
@@ -33,6 +34,7 @@ export {
   InfoTitle,
   TrashCanTitle,
   TrashCanSubTitle,
+  SmallSubTitle,
 } from "./Titles";
 export { BasicLine, DottedLine1, DottedLine2 } from "./Lines";
 export { Input, TransparencyInput } from "./Inputs";

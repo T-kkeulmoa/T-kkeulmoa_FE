@@ -103,3 +103,15 @@ export const TrashCanSubTitle = styled.div`
   font-weight: 400;
   line-height: normal;
 `;
+
+export const SmallSubTitle = styled.div`
+  width: 51px;
+  color: var(--BasicBlack, #000);
+
+  text-align: center;
+  font-family: "Spoqa Han Sans Neo";
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+`;
