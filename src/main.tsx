@@ -1,9 +1,4 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
+import ReactDOM from "react-dom";
 import PageRouter from "./app/PageRouter";
 
-ReactDOM.createRoot(document.getElementById("root")!).render(
-  <React.StrictMode>
-    <PageRouter />
-  </React.StrictMode>
-);
+ReactDOM.render(<PageRouter />, document.getElementById("root"));
