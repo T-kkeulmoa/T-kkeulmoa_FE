@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { FORMAPI, PAGE_URL } from "@/shared";
 
 export const ScanService = () => {
-  const URL = "api/v1/scan";
+  const URL = "api/v1/trash";
 
   const navigate = useNavigate();
 

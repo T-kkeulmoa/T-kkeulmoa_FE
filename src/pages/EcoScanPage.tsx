@@ -26,7 +26,7 @@ const EcoScanPage = () => {
   useEffect(() => {
     if (image) {
       const formData = new FormData();
-      formData.append("image", dataURLtoFile(image, "image"));
+      formData.append("multipartFile", dataURLtoFile(image, "image"));
       upload(formData);
     }
   }, [image]);

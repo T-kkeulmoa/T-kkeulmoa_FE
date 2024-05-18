@@ -10,7 +10,10 @@ export {
   RowContainer,
   CameraContainer,
   ScanResultContainer,
+  CardContainer,
+  CardSubContainer,
 } from "./Container";
+
 export { Loading } from "./Loading";
 export { KakaoMap } from "./KakaoMap";
 
@@ -62,3 +65,14 @@ export { BasicLine, DottedLine1, DottedLine2, GraphBar } from "./Lines";
 export { Input, TransparencyInput } from "./Inputs";
 
 export { Target1, Target2, Target3, Target4 } from "./Target";
+
+export {
+  TrashCard,
+  CardImg,
+  CardTitle,
+  CardAddress,
+  CardDist,
+  Button1,
+  Button2,
+  CardHiliteTitle,
+} from "./Card";

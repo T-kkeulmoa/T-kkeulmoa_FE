@@ -51,6 +51,20 @@ export const KakaoMap = () => {
           locationState.longitude
         ),
       },
+      {
+        title: "일반쓰레기",
+        latlng: new window.kakao.maps.LatLng(
+          locationState.latitude + 0.0009,
+          locationState.longitude + 0.0001
+        ),
+      },
+      {
+        title: "일반쓰레기",
+        latlng: new window.kakao.maps.LatLng(
+          locationState.latitude + 0.0007,
+          locationState.longitude + 0.0005
+        ),
+      },
     ];
 
     const imgSrc = "/imgs/user.png";
@@ -58,14 +72,37 @@ export const KakaoMap = () => {
 
     const markerImg = new window.kakao.maps.MarkerImage(imgSrc, imgSize);
 
-    const marker = new window.kakao.maps.Marker({
+    const basicImg = "/imgs/basicpointer.png";
+    const basicImgSize = new window.kakao.maps.Size(60, 60);
+    const basicMarkerImg = new window.kakao.maps.MarkerImage(
+      basicImg,
+      basicImgSize
+    );
+
+    const marker1 = new window.kakao.maps.Marker({
       map: map, // 마커를 표시할 지도
       position: positions[0].latlng, // 마커를 표시할 위치
       title: positions[0].title, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
       image: markerImg, // 마커 이미지
     });
 
-    marker.setMap(map);
+    const marker2 = new window.kakao.maps.Marker({
+      map: map, // 마커를 표시할 지도
+      position: positions[1].latlng, // 마커를 표시할 위치
+      title: positions[1].title, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
+      image: basicMarkerImg, // 마커 이미지
+    });
+
+    const marker3 = new window.kakao.maps.Marker({
+      map: map, // 마커를 표시할 지도
+      position: positions[2].latlng, // 마커를 표시할 위치
+      title: positions[2].title, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
+      image: basicMarkerImg, // 마커 이미지
+    });
+
+    marker1.setMap(map);
+    marker2.setMap(map);
+    marker3.setMap(map);
   }, [locationState]);
 
   return (

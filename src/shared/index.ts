@@ -4,6 +4,7 @@ export { useUserState } from "./hooks/useUserState";
 
 export { AuthService } from "./services/AuthService";
 export { ScanService } from "./services/ScanService";
+export { TrashCanService } from "./services/TrashCanService";
 
 export { dataURLtoFile } from "./utils/dataURLtoFile";
 

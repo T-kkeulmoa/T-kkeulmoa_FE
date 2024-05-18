@@ -158,3 +158,29 @@ export const CameraContainer = styled.div`
     z-index: -1;
   }
 `;
+
+export const CardContainer = styled.div`
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+
+  width: 100vw;
+  height: 200px;
+
+  overflow-x: scroll;
+
+  z-index: 10;
+`;
+
+export const CardSubContainer = styled.div`
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+
+  height: 200px;
+
+  display: flex;
+  direction: row;
+
+  z-index: 11;
+`;
