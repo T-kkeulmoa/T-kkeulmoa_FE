@@ -13,6 +13,11 @@ export const MiddleTitle = styled.div`
   color: white;
 `;
 
+export const HeaderTitle = styled(MiddleTitle)`
+  font-weight: bold;
+  color: black;
+`;
+
 export const SubTitle = styled.div`
   font-size: 14px;
   font-weight: normal;

@@ -30,3 +30,42 @@ export const SignUpButton = styled.div`
 
   margin-top: 12px;
 `;
+
+export const TrashCanButton = styled.div`
+  grid-area: trash-can;
+
+  width: 175px;
+  height: 235px;
+  flex-shrink: 0;
+
+  border-radius: 30px;
+  background: #fff;
+
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
+`;
+
+export const AppliancesRecycleButton = styled.div`
+  grid-area: appliances-recycle;
+
+  width: 187px;
+  height: 108px;
+  flex-shrink: 0;
+
+  border-radius: 30px;
+  background: #fff;
+
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
+`;
+
+export const RecycleInfoButton = styled.div`
+  grid-area: recycle-info;
+
+  width: 187px;
+  height: 108px;
+  flex-shrink: 0;
+
+  border-radius: 30px;
+  background: #fff;
+
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
+`;

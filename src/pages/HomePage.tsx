@@ -1,17 +1,31 @@
-import styled from "styled-components";
-import { KakaoMap } from "@/entities";
+import {
+  HeaderContainer,
+  HeaderTitle,
+  GridContainer,
+  PointContainer,
+  TrashCanButton,
+  AppliancesRecycleButton,
+  RecycleInfoButton,
+  GraphContainer,
+  DottedLine1,
+  DottedLine2,
+} from "@/entities";
 
 const Home = () => {
   return (
-    <>
-      <KakaoMap />
-      <Styled>된건가</Styled>
-    </>
+    <GridContainer>
+      <HeaderContainer>
+        <HeaderTitle>T끌 모아</HeaderTitle>
+      </HeaderContainer>
+      <PointContainer />
+      <DottedLine1 />
+      <TrashCanButton />
+      <AppliancesRecycleButton />
+      <RecycleInfoButton />
+      <DottedLine2 />
+      <GraphContainer />
+    </GridContainer>
   );
 };
-
-const Styled = styled.div`
-  font-size: 40px;
-`;
 
 export default Home;

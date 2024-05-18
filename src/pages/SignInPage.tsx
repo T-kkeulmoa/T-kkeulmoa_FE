@@ -2,7 +2,7 @@ import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 
 import {
-  FormContainer,
+  WhiteFormContainer,
   Input,
   SubmitButton,
   LargeTitle,
@@ -30,7 +30,7 @@ const SignInPage = () => {
   };
 
   return (
-    <FormContainer onSubmit={handleSubmit(onSubmit)}>
+    <WhiteFormContainer onSubmit={handleSubmit(onSubmit)}>
       <img src="/imgs/logo.png" alt="logo" />
       <LargeTitle>T끌 모아</LargeTitle>
       <SubTitle>티끌모아 지구를 구하자</SubTitle>
@@ -52,7 +52,7 @@ const SignInPage = () => {
       >
         회원가입
       </SignUpButton>
-    </FormContainer>
+    </WhiteFormContainer>
   );
 };
 
