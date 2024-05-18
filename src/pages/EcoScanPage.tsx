@@ -1,10 +1,16 @@
-import styled from "styled-components";
-
 import { useState, useRef, useEffect } from "react";
 import { Camera } from "react-camera-pro";
 
 import { dataURLtoFile, ScanService } from "@/shared";
-import { ScanSubmitButton, ScanSubTitle } from "@/entities";
+import {
+  ScanSubmitButton,
+  ScanSubTitle,
+  CameraContainer,
+  Target1,
+  Target2,
+  Target3,
+  Target4,
+} from "@/entities";
 import { Footer } from "@/widgets";
 
 const EcoScanPage = () => {
@@ -68,42 +74,5 @@ const EcoScanPage = () => {
     </>
   );
 };
-
-const CameraContainer = styled.div`
-  div {
-    position: absolute;
-
-    top: 42px;
-
-    width: 100%;
-    height: 617px;
-
-    z-index: -1;
-  }
-`;
-
-const Target1 = styled.div`
-  position: absolute;
-  top: 120px;
-  left: 37px;
-`;
-
-const Target2 = styled.div`
-  position: absolute;
-  top: 120px;
-  right: 37px;
-`;
-
-const Target3 = styled.div`
-  position: absolute;
-  top: 620px;
-  right: 37px;
-`;
-
-const Target4 = styled.div`
-  position: absolute;
-  top: 620px;
-  left: 37px;
-`;
 
 export default EcoScanPage;
