@@ -1,21 +1,94 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import styled from "styled-components";
+import { useNavigate } from "react-router";
+
+import { PAGE_URL, useGeoLocation } from "@/shared";
+
+const geolocationOptions = {
+  enableHighAccuracy: true,
+  timeout: 1000 * 10,
+  maximumAge: 1000 * 3600 * 24,
+};
 
 export const KakaoMap = () => {
+  const navigate = useNavigate();
+
+  const { location } = useGeoLocation(geolocationOptions);
+  const [locationState, setLocationState] = useState<{
+    latitude: number;
+    longitude: number;
+  }>({
+    latitude: 33.450701,
+    longitude: 126.570667,
+  });
+  useEffect(() => {
+    if (location)
+      setLocationState({
+        latitude: location.latitude,
+        longitude: location.longitude,
+      });
+  }, [location]);
+
   useEffect(() => {
     const container = document.getElementById(`map`); // 지도를 담을 영역의 DOM 레퍼런스
     const options = {
-      center: new window.kakao.maps.LatLng(33.450701, 126.570667), // 지도 중심 좌표
-      level: 3, // 지도의 레벨(확대, 축소 정도)
+      center: new window.kakao.maps.LatLng(
+        locationState.latitude,
+        locationState.longitude
+      ), // 지도 중심 좌표
+      level: 2, // 지도의 레벨(확대, 축소 정도)
     };
 
     const map = new window.kakao.maps.Map(container, options); // 지도 생성 및 객체 리턴
-  }, []);
 
-  return <Map id="map"></Map>;
+    const positions = [
+      {
+        title: "유저",
+        latlng: new window.kakao.maps.LatLng(
+          locationState.latitude,
+          locationState.longitude
+        ),
+      },
+    ];
+
+    const imgSrc = "/imgs/user.png";
+    const imgSize = new window.kakao.maps.Size(60, 60);
+
+    const markerImg = new window.kakao.maps.MarkerImage(imgSrc, imgSize);
+
+    const marker = new window.kakao.maps.Marker({
+      map: map, // 마커를 표시할 지도
+      position: positions[0].latlng, // 마커를 표시할 위치
+      title: positions[0].title, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
+      image: markerImg, // 마커 이미지
+    });
+
+    marker.setMap(map);
+  }, [locationState]);
+
+  return (
+    <>
+      <Map id="map" />
+      <CloseButton onClick={() => navigate(PAGE_URL.Home)}>
+        <img src="/imgs/close.svg" alt="close" />
+      </CloseButton>
+    </>
+  );
 };
 
 const Map = styled.div`
-  width: 500px;
-  height: 500px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+
+  width: 100vw;
+  height: 100vh;
+`;
+
+const CloseButton = styled.div`
+  position: fixed;
+  top: 50px;
+  left: 30px;
+
+  z-index: 2;
 `;

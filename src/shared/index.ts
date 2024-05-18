@@ -6,3 +6,5 @@ export { AuthService } from "./services/AuthService";
 export { ScanService } from "./services/ScanService";
 
 export { dataURLtoFile } from "./utils/dataURLtoFile";
+
+export { useGeoLocation } from "./hooks/useGeoLocation";

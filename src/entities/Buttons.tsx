@@ -85,5 +85,6 @@ export const RecycleInfoButton = styled.div`
   border-radius: 30px;
   background: #fff;
 
+  margin-top: 17px;
   box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
 `;

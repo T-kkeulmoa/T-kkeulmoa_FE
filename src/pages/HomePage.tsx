@@ -1,3 +1,5 @@
+import { useNavigate } from "react-router";
+
 import {
   HeaderContainer,
   HeaderTitle,
@@ -23,9 +25,10 @@ import {
 
 import { Footer } from "@/widgets";
 
-import { useUserState } from "@/shared";
+import { PAGE_URL, useUserState } from "@/shared";
 
 const Home = () => {
+  const navigate = useNavigate();
   const nickname = useUserState((state) => state.nickname);
   const point = useUserState((state) => state.point);
 
@@ -49,7 +52,7 @@ const Home = () => {
           <PointImg src="/imgs/point.png" alt="point" />
         </PointContainer>
         <DottedLine1 />
-        <TrashCanButton>
+        <TrashCanButton onClick={() => navigate(PAGE_URL.TrashCan)}>
           <TrashCanTitle>쓰레기통 위치</TrashCanTitle>
           <TrashCanSubTitle>
             주변의 쓰레기통

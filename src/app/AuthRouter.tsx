@@ -7,6 +7,7 @@ const Home = lazy(() => import("@/pages/HomePage"));
 const SignIn = lazy(() => import("@/pages/SignInPage"));
 const SignUp = lazy(() => import("@/pages/SignUpPage"));
 const EcoScan = lazy(() => import("@/pages/EcoScanPage"));
+const TrashCan = lazy(() => import("@/pages/TrashCanPage"));
 
 const AuthRouter = () => {
   const isSignIn = useUserState((state) => state.isSignIn);
@@ -24,6 +25,7 @@ const AuthRouter = () => {
 
         <Route path={PAGE_URL.Home} element={<Home />} />
         <Route path={PAGE_URL.EcoScan} element={<EcoScan />} />
+        <Route path={PAGE_URL.TrashCan} element={<TrashCan />} />
       </Routes>
     </>
   );
