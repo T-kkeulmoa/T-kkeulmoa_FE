@@ -21,8 +21,9 @@ export const useUserState = create<User.userStore>((set) => ({
     set(() => ({ isSignIn: true, nickname: res.nickname, point: res.point }));
   },
 
-  setPoint: (point, rewardLevel, memberRecycleRecordResponseDto) => {
+  setPoint: (nickname, point, rewardLevel, memberRecycleRecordResponseDto) => {
     set(() => ({
+      nickname: nickname,
       point: point,
       rewardLevel: rewardLevel,
       memberRecycleRecordResponseDto: memberRecycleRecordResponseDto,

@@ -11,7 +11,7 @@ import {
   TransparencyInput,
 } from "@/entities";
 
-import { AuthService, PAGE_URL } from "@/shared";
+import { PAGE_URL } from "@/shared";
 
 const SignUpPage = () => {
   const [step, setStep] = useState<number>(0);
@@ -24,11 +24,7 @@ const SignUpPage = () => {
     },
   });
 
-  const { signin } = AuthService();
-
-  const onSubmit = (data: User.SignInReqDto) => {
-    signin(data);
-  };
+  const onSubmit = (data: User.SignInReqDto) => {};
 
   return (
     <>

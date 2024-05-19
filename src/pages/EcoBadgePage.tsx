@@ -31,12 +31,12 @@ const EcoBadgePage = () => {
             <img src="/imgs/badge/off.png" alt="off" />
           )}
           {rewardLevel > 1 ? (
-            <img src="/imgs/badge/001.png" alt="002" />
+            <img src="/imgs/badge/002.png" alt="002" />
           ) : (
             <img src="/imgs/badge/off.png" alt="off" />
           )}
           {rewardLevel > 2 ? (
-            <img src="/imgs/badge/001.png" alt="003" />
+            <img src="/imgs/badge/003.png" alt="003" />
           ) : (
             <img src="/imgs/badge/off.png" alt="off" />
           )}

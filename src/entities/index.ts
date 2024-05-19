@@ -60,6 +60,7 @@ export {
   Graph99Title,
   ScanResultSubTitle,
   PlusTitle,
+  PlusPlusTitle,
 } from "./Titles";
 export { BasicLine, DottedLine1, DottedLine2, GraphBar } from "./Lines";
 export { Input, TransparencyInput } from "./Inputs";

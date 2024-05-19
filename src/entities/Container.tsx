@@ -69,17 +69,21 @@ export const FooterContainer = styled.div`
   box-shadow: 0px -1px 4px 0px rgba(0, 0, 0, 0.25);
 `;
 
-export const ScanResultContainer = styled(FooterContainer)`
+export const ScanResultContainer = styled.div`
+  position: fixed;
+  bottom: 0px;
   left: 50%;
   transform: translate(-50%);
 
-  justify-content: none;
-  align-items: none;
-
   width: 393px;
-  height: 381px;
+  height: 350px;
 
-  overflow: hidden;
+  overflow: scroll;
+
+  border-radius: 20px 20px 0px 0px;
+  background: #fff;
+
+  box-shadow: 0px -1px 4px 0px rgba(0, 0, 0, 0.25);
 `;
 
 export const RowContainer = styled.div`
@@ -168,8 +172,6 @@ export const CardContainer = styled.div`
   height: 200px;
 
   overflow-x: scroll;
-
-  z-index: 10;
 `;
 
 export const CardSubContainer = styled.div`
@@ -177,10 +179,8 @@ export const CardSubContainer = styled.div`
   bottom: 0px;
   left: 0px;
 
-  height: 200px;
+  height: 168px;
 
   display: flex;
   direction: row;
-
-  z-index: 11;
 `;

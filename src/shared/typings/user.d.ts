@@ -21,6 +21,7 @@ declare namespace User {
     memberRecycleRecordResponseDto: MemberRecycleRecordResponseDto;
     setSignIn: (res: SignInResDto) => void;
     setPoint: (
+      setPoint: string,
       point: number,
       rewardLevel: number,
       memberRecycleRecordResponseDto: memberRecycleRecordResponseDto
@@ -40,6 +41,7 @@ declare namespace User {
   }
 
   export interface FindUserResDto {
+    nickname: string;
     point: number;
     rewardLevel: number;
     memberRecycleRecordResponseDto: MemberRecycleRecordResponseDto;

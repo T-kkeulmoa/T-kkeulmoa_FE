@@ -34,6 +34,11 @@ export const ScanResultImg = styled.img`
   height: 440px;
   flex-shrink: 0;
   border-radius: 15px;
+
+  position: absolute;
+  left: 50%;
+  top: 90px;
+  transform: translate(-50%);
 `;
 
 export const AppliancesRecycleImg = styled.img`

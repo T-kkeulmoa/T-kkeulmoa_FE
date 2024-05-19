@@ -144,27 +144,42 @@ const Home = () => {
           <Height height="12px" />
           <RowContainer>
             <GraphElementTitle>일반쓰레기</GraphElementTitle>
-            <GraphBar color="#FDD849" number={50} />
+            <GraphBar
+              color="#FDD849"
+              number={memberRecycleRecordResponseDto.normalRecycleCount}
+            />
             <Graph99Title>99</Graph99Title>
           </RowContainer>
           <RowContainer>
             <GraphElementTitle>플라스틱</GraphElementTitle>
-            <GraphBar color="#9AB2D4" number={50} />
+            <GraphBar
+              color="#9AB2D4"
+              number={memberRecycleRecordResponseDto.plasticRecycleCount}
+            />
             <Graph99Title>99</Graph99Title>
           </RowContainer>
           <RowContainer>
             <GraphElementTitle>캔/유리</GraphElementTitle>
-            <GraphBar color="#EF753E" number={50} />
+            <GraphBar
+              color="#EF753E"
+              number={memberRecycleRecordResponseDto.canGlassRecycleCount}
+            />
             <Graph99Title>99</Graph99Title>
           </RowContainer>
           <RowContainer>
             <GraphElementTitle>종이</GraphElementTitle>
-            <GraphBar color="#AAD59F" number={50} />
+            <GraphBar
+              color="#AAD59F"
+              number={memberRecycleRecordResponseDto.paperRecycleCount}
+            />
             <Graph99Title>99</Graph99Title>
           </RowContainer>
           <RowContainer>
             <GraphElementTitle>기타</GraphElementTitle>
-            <GraphBar color="#CDBCDC" number={50} />
+            <GraphBar
+              color="#CDBCDC"
+              number={memberRecycleRecordResponseDto.otherRecycleCount}
+            />
             <Graph99Title>99</Graph99Title>
           </RowContainer>
         </GraphContainer>

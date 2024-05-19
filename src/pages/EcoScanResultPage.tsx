@@ -2,12 +2,13 @@ import { useLocation } from "react-router-dom";
 import { useNavigate } from "react-router";
 
 import {
-  PlusTitle,
+  PlusPlusTitle,
   ScanResultImg,
   CloseButton,
   ScanResultContainer,
   ScanResultSubTitle,
   ScanTitle,
+  Height,
 } from "@/entities";
 import { PAGE_URL } from "@/shared";
 
@@ -31,9 +32,9 @@ const EcoScanResultPage = () => {
       <ScanResultContainer>
         {trashTypeResponseDtoList.map((trashTypeResponseDto, index) => (
           <>
-            <PlusTitle key={index}>
+            <PlusPlusTitle key={index}>
               {trashTypeResponseDto.trashTypeName} 버리는 방법
-            </PlusTitle>
+            </PlusPlusTitle>
             <ScanResultSubTitle key={index}>
               {trashTypeResponseDto.trashTypeContent}
             </ScanResultSubTitle>

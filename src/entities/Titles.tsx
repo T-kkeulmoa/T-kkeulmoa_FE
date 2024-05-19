@@ -77,6 +77,17 @@ export const PlusTitle = styled(PointTitle)`
   font-size: 19 px;
 `;
 
+export const PlusPlusTitle = styled.div`
+  position: relative;
+  left: 10px;
+  color: var(--Shark-950, #222);
+  font-size: 21px;
+  font-weight: bold;
+
+  margin-top: 20px;
+  margin-bottom: 3px;
+`;
+
 export const PointHiliteTitle = styled(PointTitle)`
   position: static;
 
@@ -160,7 +171,7 @@ export const ScanSubTitle = styled.span`
   width: 260px;
 
   position: absolute;
-  bottom: 19%;
+  bottom: 18%;
   left: 50%;
   transform: translate(-50%);
 `;
@@ -189,15 +200,17 @@ export const BadgeSubTitle = styled.div`
 `;
 
 export const ScanResultSubTitle = styled.div`
+  position: relative;
+
+  left: 10px;
+
   width: 364px;
   height: 71px;
 
   color: var(--BasicBlack, #000);
 
   font-family: "Spoqa Han Sans Neo";
-  font-size: 13px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  letter-spacing: 0.26px;
+  font-size: 16px;
+
+  margin-bottom: 30px;
 `;

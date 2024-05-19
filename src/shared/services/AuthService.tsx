@@ -1,11 +1,13 @@
 import { AxiosResponse } from "axios";
+import { useNavigate } from "react-router";
 
-import { API, setAccess, useUserState } from "@/shared";
+import { API, setAccess, useUserState, PAGE_URL } from "@/shared";
 
 export const AuthService = () => {
   const URL = "api/v1/member";
   const setSignIn = useUserState((state) => state.setSignIn);
   const setPoint = useUserState((state) => state.setPoint);
+  const navigate = useNavigate();
 
   const signin = async (body: User.SignInReqDto) => {
     const {
@@ -17,14 +19,16 @@ export const AuthService = () => {
 
     setAccess(id);
     setSignIn({ id, nickname, point });
+
+    navigate(PAGE_URL.Home);
   };
 
   const findUser = async () => {
     const {
-      data: { point, rewardLevel, memberRecycleRecordResponseDto },
+      data: { nickname, point, rewardLevel, memberRecycleRecordResponseDto },
     } = (await API.get(`${URL}/find`)) as AxiosResponse<User.FindUserResDto>;
 
-    setPoint(point, rewardLevel, memberRecycleRecordResponseDto);
+    setPoint(nickname, point, rewardLevel, memberRecycleRecordResponseDto);
   };
 
   return { signin, findUser };

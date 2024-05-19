@@ -121,5 +121,5 @@ const Map = styled.div`
   left: 0px;
 
   width: 100vw;
-  height: 100vh;
+  height: 80%;
 `;
